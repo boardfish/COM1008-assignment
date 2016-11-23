@@ -14,6 +14,7 @@ $(document).ready(function() {
   var accessibilityContent = $('main #accessibilityContent');
   var puzzlesContent = $('main #puzzlesContent');
   $(home).click(function() {
+	document.title = 'LACHS GAMES | Home';
     $(homeContent).slideDown();
     $(foundersContent).hide();
     $(newsContent).show();
@@ -24,6 +25,7 @@ $(document).ready(function() {
     return false;
   });
   $(founders).click(function() {
+	document.title = 'LACHS GAMES | Founders';
     $(homeContent).hide();
     $(foundersContent).slideDown();
     $(newsContent).hide();
@@ -34,6 +36,7 @@ $(document).ready(function() {
     return false;
   });
   $(news).click(function() {
+	document.title = 'LACHS GAMES | News';
     $(homeContent).hide();
     $(foundersContent).hide();
     $(newsContent).slideDown();
@@ -44,6 +47,7 @@ $(document).ready(function() {
     return false;
   });
   $(recommendations).click(function() {
+	document.title = 'LACHS GAMES | Recommendations';
     $(homeContent).hide();
     $(foundersContent).hide();
     $(newsContent).hide();
@@ -54,6 +58,7 @@ $(document).ready(function() {
     return false;
   });
   $(contact).click(function() {
+	document.title = 'LACHS GAMES | Contact';
     $(homeContent).hide();
     $(foundersContent).hide();
     $(newsContent).hide();
@@ -64,6 +69,7 @@ $(document).ready(function() {
     return false;
   });
   $(accessibility).click(function() {
+	document.title = 'LACHS GAMES | Accessibility';
     $(homeContent).hide();
     $(foundersContent).hide();
     $(newsContent).hide();
@@ -74,6 +80,7 @@ $(document).ready(function() {
     return false;
   });
   $(puzzles).click(function() {
+	document.title = 'LACHS GAMES | Puzzles';
     $(homeContent).hide();
     $(foundersContent).hide();
     $(newsContent).hide();
