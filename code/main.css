@@ -1,232 +1,201 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
-
 body {
-	font-size: 2.2vh;
-	font-family: 'Open Sans', sans-serif;
-	width: 100%;
+  font-size: 2.2vh;
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
 }
-
 header img {
-	width:70%;
-	height:auto;
-	padding:5% 15% 5% 15%;
+  width: 70%;
+  height: auto;
+  padding: 5% 15% 5% 15%;
 }
-
 nav {
-	border: solid black;
-	border-width: 10px 0px;
-	z-index: -1px;
+  border: solid black;
+  border-width: 10px 0px;
+  z-index: -1px;
 }
 
 /*http://stackoverflow.com/questions/5937148/css-border-not-working, originally had my border as "border: 0 1px 0 1px solid #000;"*/
 
 nav ul {
-	width: 20%;
-	float: left;
-	position: fixed;
-	opacity: 0.5;
-	margin-top: 55vh;
+  width: 20%;
+  float: left;
+  position: fixed;
+  opacity: 0.5;
+  margin-top: 55vh;
 }
-
 nav li {
-	list-style: none;
-	display: block;
-	padding: 0% 1% 0% 1%;
-	font-family: 'Press Start 2P', cursive;
-	font-size: 2vh;
-	text-align: left;
-	width: 100%;
-	overflow: visible;
-	white-space:nowrap;
+  list-style: none;
+  display: block;
+  padding: 0% 1% 0% 1%;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2vh;
+  text-align: left;
+  width: 100%;
+  overflow: visible;
+  white-space: nowrap;
 }
-
 nav li a {
-	text-transform: uppercase;
-	color: black;
-	text-decoration: none;
-	font-weight: bold;
-	opacity: 1;
-	transition: opacity 0.25s;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 1;
+  transition: opacity 0.25s;
 }
-
 nav li a:before {
-	content: "[";
+  content: "[";
 }
-
 nav li a:hover {
-	opacity: 1;
+  opacity: 1;
 }
-
-
 .firstletter {
-	color:white;
-	background-color:black;
-	padding: 1px 6px 0px 6px;
-	border: 1px solid black;
+  color: white;
+  background-color: black;
+  padding: 1px 6px 0px 6px;
+  border: 1px solid black;
 }
-
 .red {
-	background-color: red;
+  background-color: red;
 }
-
 .yellow {
-	background-color: yellow;
-	color: grey;
+  background-color: yellow;
+  color: grey;
 }
-
 .blue {
-	background-color: blue;
+  background-color: blue;
 }
-
 .green {
-	background-color: green;
+  background-color: green;
 }
-
 .hidden {
-	display: none;
+  display: none;
 } //for jquery slide out on startup
-
 .titanic {
-	float: none;
+  float: none;
 }
-
 h1 {
-	text-transform: uppercase;
-	font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  font-family: 'Press Start 2P', cursive;
 }
-
 main {
-	width: 50%;
-	padding: 0% 10% 0% 10%;
-	float: right;
-	background-color: yellow;
+  width: 50%;
+  padding: 0% 10% 0% 10%;
+  float: right;
+  background-color: yellow;
 }
-
 article {
-	background-color: rgba(255,255,255,0.5);
-	padding: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 2px;
 }
-
 article blockquote {
-	width: 80%;
-	margin: 0 auto 0 auto;
-	padding: 10px 0px 10px 10px;
-	border: 5px 0px 5px 0px solid black;
-	font-weight: bold;
-	background-color: lightgray;
-	font-size: 90%;
+  width: 80%;
+  margin: 0 auto 0 auto;
+  padding: 10px 0px 10px 10px;
+  border: 5px 0px 5px 0px solid black;
+  font-weight: bold;
+  background-color: lightgray;
+  font-size: 90%;
 }
-
 article blockquote:before {
-	content: ">>";
-	vertical-align: -0.25em;
-	font-size: 120%;
-	font-family: 'Press Start 2P', cursive;;
+  content: ">>";
+  vertical-align: -0.25em;
+  font-size: 120%;
+  font-family: 'Press Start 2P', cursive;
+  ;
 }
-
 form {
-	width: 80%;
-	margin: 0 auto 0 auto;
+  width: 80%;
+  margin: 0 auto 0 auto;
 }
-
 input {
-	background-color: transparent;
-	border: 0px;
-	border-bottom: 2px dashed black;
-	text-align: center;
-	width: 100%;
+  background-color: transparent;
+  border: 0px;
+  border-bottom: 2px dashed black;
+  text-align: center;
+  width: 100%;
 }
-
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color: black;
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: black;
 }
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color: black;
-   opacity:  1;
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: black;
+  opacity: 1;
 }
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color: black;
-   opacity:  1;
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: black;
+  opacity: 1;
 }
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: black;
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: black;
 }
-
 input[name=comment] {
-	padding: 50px 0 50px 0;
+  padding: 50px 0 50px 0;
 }
-
 img.recommendationImage {
-	width: 100%;
-	height: auto;
+  width: 100%;
+  height: auto;
 }
-
 footer {
-	text-align: center;
-	border: solid black;
-	border-width: 10px 0px;
-	width: 100%;
-	float: right; /*need to fix this!*/
+  text-align: center;
+  border: solid black;
+  border-width: 10px 0px;
+  width: 100%;
+  float: right;
+  /*need to fix this!*/
 }
-
 @media screen and (min-width: 768px) {
-	
-	nav {
-		border: solid black;
-		border-width: 10px 0px;
-		z-index: 0;
-		background-color: lightblue;
-	}
-
-	/*http://stackoverflow.com/questions/5937148/css-border-not-working, originally had my border as "border: 0 1px 0 1px solid #000;"*/
-
-	nav ul {
-		width: 100%;
-		float: none;
-		position: static;
-		opacity: 1;
-		margin: 0 auto 0 auto;
-	}
-
-	nav li {
-		list-style: none;
-		display: block;
-		padding: 0% 1% 0% 1%;
-		font-family: 'Press Start 2P', cursive;
-		font-size: 1em;
-		text-align: center;
-		width: 40%;
-		overflow: hidden;
-		white-space:normal;
-	}
-
-	nav li a {
-		text-transform: uppercase;
-		color: black;
-		text-decoration: none;
-		font-weight: 
-		bold;
-		opacity: 1;
-		transition: color 0.25s;
-	}
-
-	nav li a:hover {
-		color: white;
-	}
-	
-	nav li:nth-child(odd) {
-		float:left;
-	}
-	/*http://stackoverflow.com/questions/13824918/how-to-style-my-unordered-list-like-a-table for nth-child only!*/
-	
-	main {
-		width: 80%;
-	}
-	
-	article {
-		padding: 20px;
-		border: 15px solid black;
-		margin: 50px;
-	}
+  nav {
+    border: solid black;
+    border-width: 10px 0px;
+    z-index: 0;
+    background-color: lightblue;
+  }
+  /*http://stackoverflow.com/questions/5937148/css-border-not-working, originally had my border as "border: 0 1px 0 1px solid #000;"*/
+  nav ul {
+    width: 100%;
+    float: none;
+    position: static;
+    opacity: 1;
+    margin: 0 auto 0 auto;
+  }
+  nav li {
+    list-style: none;
+    display: block;
+    padding: 0% 1% 0% 1%;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1em;
+    text-align: center;
+    width: 40%;
+    overflow: hidden;
+    white-space: normal;
+  }
+  nav li a {
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 1;
+    transition: color 0.25s;
+  }
+  nav li a:hover {
+    color: white;
+  }
+  nav li:nth-child(odd) {
+    float: left;
+  }
+  /*http://stackoverflow.com/questions/13824918/how-to-style-my-unordered-list-like-a-table for nth-child only!*/
+  main {
+    width: 80%;
+  }
+  article {
+    padding: 20px;
+    border: 15px solid black;
+    margin: 50px;
+  }
 }
