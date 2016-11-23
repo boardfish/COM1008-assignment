@@ -149,6 +149,32 @@ footer {
   float: right;
   /*need to fix this!*/
 }
+
+div.founder {
+	background-color: red;
+/*	float: left;
+	width: 27%;
+	margin: 1%;*/
+	margin: 0 0 10px 0;
+	padding: 2%;
+	max-height: 520px;
+}
+
+div.founder h2{
+	background-color: yellow;
+	text-align: center;
+	border: 10px inset yellow;
+    font-family: 'Press Start 2P', cursive;	
+	/*font-size: 32px;*/
+	font-size: 2vh;
+	padding: 5px;
+}
+
+div.founder img{
+	width: 100%;
+	height: auto;
+}
+
 @media screen and (min-width: 768px) {
   nav {
     border: solid black;
@@ -197,5 +223,15 @@ footer {
     padding: 20px;
     border: 15px solid black;
     margin: 50px;
+  }
+  
+  div.founder {
+	float: left;
+	width: 27%;
+	margin: 1%;
+  }
+
+  div.founder h2{
+	font-size: 32px;
   }
 }
