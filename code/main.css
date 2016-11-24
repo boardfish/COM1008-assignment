@@ -164,7 +164,7 @@ div.founder h2{
 	background-color: yellow;
 	text-align: center;
 	border: 10px inset yellow;
-    font-family: 'Press Start 2P', cursive;	
+    font-family: 'Press Start 2P', cursive;
 	/*font-size: 32px;*/
 	font-size: 2vh;
 	padding: 5px;
@@ -173,6 +173,16 @@ div.founder h2{
 div.founder img{
 	width: 100%;
 	height: auto;
+}
+
+#window {
+  display: table;
+  margin: 10px auto 0 auto;
+  border: 10px inset brown;
+}
+
+#victory {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -189,6 +199,7 @@ div.founder img{
     position: static;
     opacity: 1;
     margin: 0 auto 0 auto;
+    padding: 20px 0;
   }
   nav li {
     list-style: none;
@@ -224,7 +235,7 @@ div.founder img{
     border: 15px solid black;
     margin: 50px;
   }
-  
+
   div.founder {
 	float: left;
 	width: 27%;
@@ -232,6 +243,6 @@ div.founder img{
   }
 
   div.founder h2{
-	font-size: 32px;
+	font-size: 2vw;
   }
 }

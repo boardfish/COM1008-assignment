@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="code/normalise.css" rel="stylesheet" type="text/css">
+    <link href="code/main.css" rel="stylesheet" type="text/css">
+    <title>LACHS Games | Home</title>
+    <meta content="Simon Fish" name="author">
+    <meta content="width=device-width" name="viewport">
+    <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+    <script src="code/main.js">
+    </script>
+  </head>
+  <body>
+    <header>
+  <img src="assets/LACHS.png">
+</header>
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html"><span class="firstletter red">R</span>eturn</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.2"
+    id="window" width="300" height="300">
+      <rect id="red" class="square" x="0" y="200" width="90" height="90"
+      fill="red"/>
+      <rect id="green" class="square" x="100" y="200" width="90" height="90"
+      fill="green"/>
+      <rect id="blue" class="square" x="200" y="200" width="90" height="90"
+      fill="blue"/>
+      <rect id="orange" class="square" x="0" y="100" width="90" height="90"
+      fill="orange"/>
+      <rect id="pink" class="square" x="100" y="100" width="90" height="90"
+      fill="pink"/>
+      <rect id="white" class="square" x="200" y="100" width="90" height="90"
+      fill="white"/>
+      <rect id="cyan" class="square" x="0" y="0" width="90" height="90"
+      fill="cyan"/>
+      <rect id="yellow" class="square" x="100" y="0" width="90" height="90"
+      fill="yellow"/>
+      <rect id="purple" class="square" x="200" y="0" width="90" height="90"
+      fill="purple"/>
+    </svg>
+    <div id="victory">
+      <p>Congratulations, <strong>you win!</strong></p>
+      <input type="button" onClick="history.go(0)" value="Play Again">
+    <!--http://www.htmlgoodies.com/tutorials/getting_started/article.php/3479551#click
+    -->
+    </div>
+    <script src="code/slidingblocks.js"></script>
+  </main>
+  </body>
+</html>
