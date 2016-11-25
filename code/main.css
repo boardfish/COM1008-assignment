@@ -157,7 +157,7 @@ div.founder {
 	margin: 1%;*/
 	margin: 0 0 10px 0;
 	padding: 2%;
-	max-height: 520px;
+	max-height: 800px;
 }
 
 div.founder h2{
@@ -171,8 +171,10 @@ div.founder h2{
 }
 
 div.founder img{
-	width: 100%;
-	height: auto;
+  height: 250px;
+  width: auto;
+  display: table;
+  margin: 0 auto;
 }
 
 #window {
