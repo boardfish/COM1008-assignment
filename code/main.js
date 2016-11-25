@@ -13,6 +13,7 @@ $(document).ready(function() {
   var contactContent = $('main #contactContent');
   var accessibilityContent = $('main #accessibilityContent');
   var puzzlesContent = $('main #puzzlesContent');
+  var fictitiousContent = $('main #fictitiousContent');
   $(home).click(function() {
 	document.title = 'LACHS GAMES | Home';
     $(homeContent).slideDown();
@@ -22,6 +23,7 @@ $(document).ready(function() {
     $(contactContent).hide();
     $(accessibilityContent).show();
     $(puzzlesContent).hide();
+    $(fictitiousContent).hide();
     return false;
   });
   $(founders).click(function() {
@@ -33,6 +35,7 @@ $(document).ready(function() {
     $(contactContent).hide();
     $(accessibilityContent).hide();
     $(puzzlesContent).hide();
+    $(fictitiousContent).show();
     return false;
   });
   $(news).click(function() {
@@ -44,6 +47,7 @@ $(document).ready(function() {
     $(contactContent).hide();
     $(accessibilityContent).hide();
     $(puzzlesContent).hide();
+    $(fictitiousContent).show();
     return false;
   });
   $(recommendations).click(function() {
@@ -55,6 +59,7 @@ $(document).ready(function() {
     $(contactContent).hide();
     $(accessibilityContent).hide();
     $(puzzlesContent).hide();
+    $(fictitiousContent).hide();
     return false;
   });
   $(contact).click(function() {
@@ -66,6 +71,7 @@ $(document).ready(function() {
     $(contactContent).slideDown();
     $(accessibilityContent).hide();
     $(puzzlesContent).hide();
+    $(fictitiousContent).show();
     return false;
   });
   $(accessibility).click(function() {
@@ -77,6 +83,7 @@ $(document).ready(function() {
     $(contactContent).hide();
     $(accessibilityContent).slideDown();
     $(puzzlesContent).hide();
+    $(fictitiousContent).hide();
     return false;
   });
   $(puzzles).click(function() {
@@ -88,6 +95,7 @@ $(document).ready(function() {
     $(contactContent).hide();
     $(accessibilityContent).hide();
     $(puzzlesContent).slideDown();
+    $(fictitiousContent).hide();
     return false;
   });
 });
