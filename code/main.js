@@ -104,7 +104,11 @@ $(document).ready(function() {
     $(fictitiousContent).hide();
     return false;
   });
+
   $(showall).click(function() {
-    $(hiddenSection).toggle();
+    $(this).parent().children("blockquote").nextAll().toggle();
+    $(this).show();
+
   });
+
 });
