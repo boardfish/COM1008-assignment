@@ -107,6 +107,11 @@ $(document).ready(function() {
 
   $(showall).click(function() {
     $(this).parent().children("blockquote").nextAll().toggle();
+    if ($(this).parent().children("blockquote").next().is(":hidden")) {
+      $(this).attr("value", "Show");
+    } else {
+      $(this).attr("value", "Hide");
+    }
     $(this).show();
 
   });
