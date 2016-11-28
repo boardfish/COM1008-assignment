@@ -113,7 +113,8 @@ article blockquote:before {
   ;
 }
 article img {
-  height: 250px;
+  width: 80%;
+  height: auto;
   display: table;
   margin: 0 auto;
   background-color: white;
@@ -247,23 +248,31 @@ div.founder img{
   main {
     width: 80%;
   }
-  article {
-    padding: 20px;
-    border: 15px solid black;
-    margin: 50px;
-    width: 45%;
-  }
 
-  div.founder {
+  div.founder, article {
 	float: left;
 	width: 27%;
 	margin: 1%;
   }
 
+  article {
+    padding: 20px;
+    border: 15px solid black;
+  }
+
+  article img {
+    width: 80%;
+    height: auto;
+  }
+
+  #accessibilityContent {
+    clear: both;
+  }
+
+
+
   div.founder h2{
 	font-size: 2vw;
   }
-  main article:nth-child(odd) {
-    float: left;
-  }
+
 }
