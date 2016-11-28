@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  //navbar and sections
   var home = $('nav ul #home');
   var founders = $('nav ul #founders');
   var news = $('nav ul #news');
@@ -13,7 +14,12 @@ $(document).ready(function() {
   var contactContent = $('main #contactContent');
   var accessibilityContent = $('main #accessibilityContent');
   var puzzlesContent = $('main #puzzlesContent');
+  //fictitious content warning
   var fictitiousContent = $('main #fictitiousContent');
+  //show all article button
+  var showall = $('article input');
+  var hiddenSection = $('article').children(':hidden');
+  //navbar options: showing parts of page on click
   $(home).click(function() {
 	document.title = 'LACHS GAMES | Home';
     $(homeContent).slideDown();
@@ -97,5 +103,8 @@ $(document).ready(function() {
     $(puzzlesContent).slideDown();
     $(fictitiousContent).hide();
     return false;
+  });
+  $(showall).click(function() {
+    $(hiddenSection).toggle();
   });
 });

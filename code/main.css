@@ -89,6 +89,13 @@ article {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 2px;
 }
+article p {
+  display: none;
+}
+article p:first-of-type {
+  display: block;
+}
+
 article blockquote {
   width: 80%;
   margin: 0 auto 0 auto;
@@ -104,6 +111,14 @@ article blockquote:before {
   font-size: 120%;
   font-family: 'Press Start 2P', cursive;
   ;
+}
+article img {
+  height: 250px;
+  display: table;
+  margin: 0 auto;
+  background-color: white;
+  border: 10px solid black;
+  padding: 5px;
 }
 form {
   width: 80%;
@@ -236,6 +251,7 @@ div.founder img{
     padding: 20px;
     border: 15px solid black;
     margin: 50px;
+    width: 45%;
   }
 
   div.founder {
@@ -246,5 +262,8 @@ div.founder img{
 
   div.founder h2{
 	font-size: 2vw;
+  }
+  main article:nth-child(odd) {
+    float: left;
   }
 }
