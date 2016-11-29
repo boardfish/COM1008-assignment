@@ -20,6 +20,8 @@ $(document).ready(function() {
   var showall = $('article input');
   var hiddenSection = $('article').children(':hidden');
   //navbar options: showing parts of page on click
+  var nav = $('nav input');
+
   $(home).click(function() {
 	document.title = 'LACHS GAMES | Home';
     $(homeContent).slideDown();
@@ -113,7 +115,17 @@ $(document).ready(function() {
       $(this).attr("value", "Hide");
     }
     $(this).show();
+  });
 
+  $(nav).click(function() {
+    console.log("birb");
+    $(this).parent().children().nextAll().toggle();
+    $(this).show();
+    if ($(this).parent().children().next().is(":hidden")) {
+      $(this).css("font-size", "50px");
+    } else {
+      $(this).css("font-size", "18px");
+    }
   });
 
 });
