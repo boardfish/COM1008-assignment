@@ -93,6 +93,10 @@ nav input {
   font-size: 50px;
 }
 
+nav ul ul {
+  clear: both;
+}
+
 .firstletter {
   color: white;
   background-color: black;
@@ -165,6 +169,11 @@ article img {
   border: 10px solid black;
   padding: 5px;
 }
+
+div#puzzlesContent img {
+  background-color: white;
+}
+
 form {
   width: 80%;
   margin: 0 auto 0 auto;
@@ -247,7 +256,33 @@ div.founder img{
   display: none;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  nav ul {
+    width: 100%;
+    display: block;
+  }
+  nav li {
+    overflow: visible;
+    text-align: left;
+  }
+  nav {
+    width: 30%;
+    float: left;
+    position: fixed;
+    padding-right: 75px;
+    border-right: 10px solid black;
+    font-size: 18px;
+
+  }
+  main {
+    float: right;
+    width: 70%;
+  }
+}
+
 @media screen and (min-width: 1024px) {
+
   nav input {
     display: none;
   }
