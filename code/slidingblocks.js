@@ -117,6 +117,7 @@ var size = $(window).width()/3;
 /*var grid = [["purple", "white", "pink"], ["green", "blue", "cyan"], ["red", "orange", "yellow"]];*/
 var endGoalGrid = [["purpleG", "pinkG", "whiteG"], ["greenG", "blueG", "cyanG"], ["redG", "orangeG", "yellowG"]];
 // main program body
+nextLevel();
 redrawGrid(grid, size);
 redrawGrid(endGoalGrid, size);
 init();
