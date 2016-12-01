@@ -193,7 +193,7 @@ div.founder img{
   margin: 0 auto;
 }
 
-#window {
+#window, #windowGoal {
   display: table;
   margin: 10px auto 0 auto;
   border: 10px inset brown;

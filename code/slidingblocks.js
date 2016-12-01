@@ -20,7 +20,7 @@ function swap(square) {
     grid[squareX][squareY] = "white";
     grid[whiteX][whiteY] = square;
     console.log(square, "was swapped");
-    redrawGrid()
+    redrawGrid(grid, size)
     winCheck()
   }
   else {
@@ -28,7 +28,7 @@ function swap(square) {
   }
 }
 
-function redrawGrid() {
+function redrawGrid(grid, size) {
   console.log("Redrawing...");
   console.log(grid);
   var firstStageSwapped = false;
@@ -36,6 +36,7 @@ function redrawGrid() {
     for (var n = 0; n < grid[i].length; n++) {
       console.log(grid[i][n]);
       var editedSquare = document.getElementById(grid[i][n]);
+
       console.log(grid[i][n], "to", n*size/3, (grid.length-i-1)*size/3);
       editedSquare.setAttribute("x", n*size/3);
       editedSquare.setAttribute("y", (grid.length-i-1)*size/3);
@@ -70,6 +71,8 @@ function init() {
   */
   $('#window').attr("width", size);
   $('#window').attr("height", size);
+  $('#windowGoal').attr("width", size);
+  $('#windowGoal').attr("height", size);
   $('.square').attr("width", size/3);
   $('.square').attr("height", size/3);
   $('.square').click(function(){
@@ -82,7 +85,7 @@ challenge gave me a lead in to how the random function works*/
 function nextLevel() {
   console.log("NEXTLEVEL FUNCTION EXECUTED \N------------");
   var colorList = ["red", "orange", "yellow", "green", "blue", "cyan","purple", "pink", "white"] //add more colours to this list to scale the program up to bigger grids.
-  var goalcolorList = ["red", "orange", "yellow", "green", "blue", "cyan", "purple", "pink", "white"];
+  var goalcolorList = ["redG", "orangeG", "yellowG", "greenG", "blueG", "cyanG", "purpleG", "pinkG", "whiteG"];
   var colorIndex;
   var goalcolorIndex;
   for (var i = 0; i < grid.length; i++) {
@@ -102,7 +105,8 @@ function nextLevel() {
       console.log(endGoalGrid[i]);
     }
   }
-  redrawGrid()
+  redrawGrid(grid, size)
+  redrawGrid(endGoalGrid, size)
   $('#window').slideDown();
   $('#victory').hide();
 }
@@ -111,7 +115,8 @@ function nextLevel() {
 var grid = [["red", "green", "blue"], ["orange", "pink", "white"], ["cyan", "yellow", "purple"]];
 var size = $(window).width()/3;
 /*var grid = [["purple", "white", "pink"], ["green", "blue", "cyan"], ["red", "orange", "yellow"]];*/
-var endGoalGrid = [["purple", "pink", "white"], ["green", "blue", "cyan"], ["red", "orange", "yellow"]];
+var endGoalGrid = [["purpleG", "pinkG", "whiteG"], ["greenG", "blueG", "cyanG"], ["redG", "orangeG", "yellowG"]];
 // main program body
-redrawGrid();
+redrawGrid(grid, size);
+redrawGrid(endGoalGrid, size);
 init();
