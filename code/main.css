@@ -226,7 +226,9 @@ div.founder {
 	margin: 1%;*/
 	margin: 0 0 10px 0;
 	padding: 2%;
+  min-height: 525px;
 	max-height: 800px;
+  float: left;
 }
 
 div.founder h2{
@@ -270,7 +272,7 @@ div.founder img{
     width: 30%;
     float: left;
     position: fixed;
-    padding-right: 75px;
+    padding: 0 0 10px 75px;
     border-right: 10px solid black;
     font-size: 18px;
 
@@ -300,7 +302,7 @@ div.founder img{
     position: static;
     opacity: 1;
     margin: 0 auto 0 auto;
-    padding: 20px 0;
+    padding: 20px 0 40px 0;
   }
   nav li {
     list-style: none;

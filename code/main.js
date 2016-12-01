@@ -128,5 +128,7 @@ $(document).ready(function() {
   });
   //showing nav menu on resize
   window.onresize=function(){$(nav).parent().children().nextAll().show();};
-
+  //puzzles slidedown: inspired by http://jsfiddle.net/amkrtchyan/4jxph/3/
+  $('nav ul #puzzles').hover(function(){$('nav ul ul').slideDown();});
+  $('nav ul ul').hover(function(){$('nav ul ul').show()}, function(){$('nav ul ul').delay(800).slideUp();} )
 });
