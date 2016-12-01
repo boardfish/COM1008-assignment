@@ -199,24 +199,31 @@ footer {
     border: solid black;
     border-width: 10px 0px;
     width: 100%;
+    clear: both;
 }
 div.founder {
     background-color: red;
     margin: 0 0 10px 0;
     padding: 2%;
-    min-height: 525px;
+    min-height: 550px;
     max-height: 800px;
     float: left;
     /*Thanks to width of divs, these arrange themselves in rows*/
 }
-div.founder h2 {
+#puzzlesContent {
+  padding-bottom: 1100px;
+}
+div.founder h2, div.founder h2 a {
     background-color: yellow;
     text-align: center;
     border: 10px inset yellow;
     font-family: 'Press Start 2P', cursive;
     font-size: 1.5vh;
     padding: 5px;
+    color: black;
+    text-decoration: none;
 }
+
 div.founder img {
     height: 250px;
     width: auto;
@@ -248,16 +255,31 @@ div.founder img {
         text-align: left;
     }
     nav {
-        width: 30%;
+        width: 10%;
         float: left;
         position: fixed;
-        padding: 0 0 10px 75px;
+        padding: 0 200px 10px 10px;
         border-right: 10px solid black;
         font-size: 18px;
     }
     main {
         float: right;
         width: 70%;
+    }
+
+    div.founder {
+      width: 40%;
+      padding: 2%;
+      margin: 2%;
+    }
+
+    div.founder img {
+      width: auto;
+    }
+
+    article {
+      margin-bottom: 10px;
+      padding: 10px;
     }
 }
 @media screen and (min-width: 1024px) {
