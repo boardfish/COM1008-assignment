@@ -81,7 +81,7 @@ h1 {
 }
 main {
   width: 50%;
-  padding: 0% 10% 0% 10%;
+  padding: 2% 10% 10% 10%;
   float: right;
   background-color: yellow;
 }
@@ -193,7 +193,7 @@ div.founder img{
   margin: 0 auto;
 }
 
-#window {
+#window, #windowGoal {
   display: table;
   margin: 10px auto 0 auto;
   border: 10px inset brown;
