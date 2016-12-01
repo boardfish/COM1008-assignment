@@ -95,6 +95,7 @@ nav input {
 
 nav ul ul {
   clear: both;
+  display: block;
 }
 
 .firstletter {
@@ -303,6 +304,9 @@ div.founder img{
     opacity: 1;
     margin: 0 auto 0 auto;
     padding: 20px 0 40px 0;
+  }
+  nav ul ul {
+    display: none;
   }
   nav li {
     list-style: none;

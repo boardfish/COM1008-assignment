@@ -7,9 +7,10 @@
   <title>LACHS Games | Home</title>
   <meta content="Simon Fish" name="author">
   <meta content="width=device-width" name="viewport">
-  <!--
-  FAVICONS
-  -->
+  <!--FAVICONS - generated via favicongenerator. While compatibility was only
+  necessary for leading browsers, the favicons here ensure that all popular
+  devices are covered, including if you add iPhone and Android home screen
+  icons.-->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" href="assets/favicons/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="assets/favicons/favicon-194x194.png" sizes="194x194">
@@ -20,25 +21,40 @@
   <link rel="shortcut icon" href="assets/favicons/favicon.ico">
   <meta name="apple-mobile-web-app-title" content="LACHS">
   <meta name="application-name" content="LACHS">
+  <!--In particular, these two lines refer to Windows 8/10 tiles.-->
   <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
+  <!--Import jQuery libraries from CDN. CloudFlare's servers are apparently
+  some of the best, even if the user might already have jQuery from another
+  popular site.-->
   <script src=
   "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js">
   </script>
+  <!--JavaScript I personally have scripted for site interactions. I picked up
+  jQuery during GreatUniHack 2016 upon recommendation of third-year teammates,
+  and I generally see it as a much quicker way to write JavaScript. However,
+  the game script (slidingblocks.js) primarily uses the JavaScript we have been
+  taught in lectures.
+  I was briefly introduced to Bootstrap during HackNotts 2016. I'm interested
+  to see how that might have helped, but as advised, it has not been included
+  in this assignment.
+  -->
   <script src="code/main.js">
   </script>
 </head>
 <body>
   <header>
-    <img src="assets/LACHS.png">
+    <!--header image as link-->
+    <a href="#"><img src="assets/LACHS.png" alt="LACHS logo"></a>
   </header>
   <nav>
-    <input type="button" value="=">
+    <input type="button" value="="><!--sandwich button for mobile navbar-->
     <ul>
       <li>
         <a href="#" id="home"><span class="firstletter red">H</span>ome</a>
       </li>
       <li>
+        <!--span changes first letter to reflect LACHS logo-->
         <a href="#" id="founders"><span class=
         "firstletter yellow">F</span>ounders</a>
       </li>
@@ -61,7 +77,8 @@
         <a href="#" id="puzzles"><span class=
         "firstletter blue">P</span>uzzles</a>
       </li>
-      <ul style="display:none;">
+      <!--nested list is affected differently at breakpoints-->
+      <ul>
         <li>
           <a href="match.html" id="match">Match the Pairs</a>
         </li>
@@ -69,12 +86,22 @@
           <a href="slidingblocks.html" id="slidingblocks">Sliding Blocks</a>
         </li>
         <li>
-          <a href="spotthedifference" id="spotthedifference">Spot the Difference</a>
+          <a href="spotthedifference.html" id="spotthedifference">Spot the Difference</a>
         </li>
       </ul>
     </ul>
   </nav>
   <main>
+    <!--Instead of having individual HTML pages, I use jQuery to hide and reveal
+    parts of the page at will. In a similar manner to methods, this saves on recycled
+    lines of code. In addition, it allows the user to access the entire webpage
+    at once - particularly useful if connection shorts out midway through. This
+    is even effective when Javascript is in use, as that acts clientside. If not,
+    everything is still accessible.
+    I'll still be referring to sections of the page as pages in their own right
+    for ease of understanding.-->
+    <!--This fictitious content warning appears on pages where necessary, as
+    stated in the brief.-->
     <div class="hidden" id="fictitiousContent">
       <p>Please note that information on this page may be
       <strong>fictitious</strong>, and should not be considered as fact.</p>
@@ -88,9 +115,12 @@
       platforms. With cheaper technology solutions on the rise, this number can
       only grow. We hope kids everywhere have fun learning with LACHS!</p>
     </div>
+    <!--Some sections are hidden on first load. The homepage actually comprises
+    the Home, News and Accessibility sections.-->
     <div class="hidden" id="foundersContent">
       <h1>Our Founders</h1>
   	  <div class="founder">
+      <!--Disclaimer: No identification with actual persons (living or deceased), places, buildings, and products is intended or should be inferred. Images are merely placeholders-->
   		<img class="recommendationImage"  src="assets/founder1.png">
   		<h2>Haswell Brookes-Lachs</h2>
   		<p>Haswell is the company's original founder. After having previously worked as an ambasssador for GitHub, he decided to expand his passion for teaching in a way that would reach children everywhere. Building web games was the best way to make this both accessible and modern.</p>
@@ -113,7 +143,7 @@
         <h1>LACHS partners with GitHub!</h1>
         <p>Version control is a necessity to all programmers - it's a vital part of their education, just like those basic things children learn in primary schools. GitHub knows just how important it is to teach a good workflow and make sure everyone's on the same page, so we have partnered with them to employ a new line of ambassadors for our games!</p>
         <p>Expect to see LACHS at a school near you very soon as we demonstrate our games to youngsters across the UK, provide fun tutorials, and show them that education can be fun with the magic of modern technology. GitHub's mentors are also very excited to work with us, and have released their own official statement on the matter, from the mouth of their very own little Octocat, Mona Lisa.</p>
-        <blockquote>
+        <blockquote> <!--Acts as trigger for "Show Full" button to be displayed. Anything beyond this point in the article is hidden.-->
           "I can't wait to show you all what LACHS have in store!"
         </blockquote>
         <p>"Learning can be tough, but this website makes it super fun," the Octocat has said as the mascot of her company in announcing our partnership. "I can't wait to show you all what LACHS have in store!"</p>
@@ -178,7 +208,7 @@
       fill out the following form. You can also find our address in the page
       footer.</p>
       <form action="mailto:sgfish1@sheffield.ac.uk" enctype="text/plain" method=
-      "post">
+      "get"> <!--sends email to my personal address in plaintext-->
         <input name="name" placeholder="Name:" type="text"><br>
         <input name="emailaddress" placeholder="Email:" type="text"><br>
         <input name="comment" placeholder="Comment:" size="50" type="text"><br>
@@ -193,10 +223,11 @@
       allows your browser to change certain features. In particular, those of
       you with sight impairments are able to use features such as high contrast
       mode and narration. If you do not have a pleasant user experience, please
-      <a href="contact.html">contact us</a>.</p>
+      <a href="#" id="contact">contact us</a>.
     </div>
     <div class="hidden" id="puzzlesContent">
       <h1>Our Puzzles</h1>
+      <!--These use the founder class as the layout is practically identical between the two-->
   	  <div class="founder">
   		<img src="assets/match.png">
   		<h2>Match the Pairs</h2>

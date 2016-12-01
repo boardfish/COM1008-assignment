@@ -5,6 +5,7 @@ $(document).ready(function() {
   var news = $('nav ul #news');
   var recommendations = $('nav ul #recommendations');
   var contact = $('nav ul #contact');
+  var contact2 = $('main #accessibilityContent #contact');
   var accessibility = $('nav ul #accessibility');
   var puzzles = $('nav ul #puzzles');
   var homeContent = $('main #homeContent');
@@ -82,6 +83,18 @@ $(document).ready(function() {
     $(fictitiousContent).show();
     return false;
   });
+  $(contact2).click(function() {
+	document.title = 'LACHS GAMES | Contact';
+    $(homeContent).hide();
+    $(foundersContent).hide();
+    $(newsContent).hide();
+    $(recommendationsContent).hide();
+    $(contactContent).slideDown();
+    $(accessibilityContent).hide();
+    $(puzzlesContent).hide();
+    $(fictitiousContent).show();
+    return false;
+  });
   $(accessibility).click(function() {
 	document.title = 'LACHS GAMES | Accessibility';
     $(homeContent).hide();
@@ -128,6 +141,7 @@ $(document).ready(function() {
   });
   //showing nav menu on resize
   window.onresize=function(){$(nav).parent().children().nextAll().show();};
+
   //puzzles slidedown: inspired by http://jsfiddle.net/amkrtchyan/4jxph/3/
   $('nav ul #puzzles').hover(function(){$('nav ul ul').slideDown();});
   $('nav ul ul').hover(function(){$('nav ul ul').show()}, function(){$('nav ul ul').delay(800).slideUp();} )
