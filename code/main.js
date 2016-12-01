@@ -118,7 +118,6 @@ $(document).ready(function() {
   });
 
   $(nav).click(function() {
-    console.log("birb");
     $(this).parent().children().nextAll().toggle();
     $(this).show();
     if ($(this).parent().children().next().is(":hidden")) {
@@ -127,5 +126,7 @@ $(document).ready(function() {
       $(this).css("font-size", "18px");
     }
   });
+  //showing nav menu on resize
+  window.onresize=function(){$(nav).parent().children().nextAll().show();};
 
 });
