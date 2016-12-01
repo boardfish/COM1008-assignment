@@ -11,22 +11,29 @@
   necessary for leading browsers, the favicons here ensure that all popular
   devices are covered, including if you add iPhone and Android home screen
   icons.-->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="assets/favicons/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="assets/favicons/favicon-194x194.png" sizes="194x194">
-  <link rel="icon" type="image/png" href="assets/favicons/android-chrome-192x192.png" sizes="192x192">
-  <link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="assets/favicons/manifest.json">
-  <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#b3a951">
-  <link rel="shortcut icon" href="assets/favicons/favicon.ico">
-  <meta name="apple-mobile-web-app-title" content="LACHS">
-  <meta name="application-name" content="LACHS">
+  <link href="assets/favicons/apple-touch-icon.png" rel="apple-touch-icon"
+  sizes="180x180">
+  <link href="assets/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type=
+  "image/png">
+  <link href="assets/favicons/favicon-194x194.png" rel="icon" sizes="194x194"
+  type="image/png">
+  <link href="assets/favicons/android-chrome-192x192.png" rel="icon" sizes=
+  "192x192" type="image/png">
+  <link href="assets/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type=
+  "image/png">
+  <link href="assets/favicons/manifest.json" rel="manifest">
+  <link href="assets/favicons/safari-pinned-tab.svg" rel="mask-icon">
+  <link href="assets/favicons/favicon.ico" rel="shortcut icon">
+  <meta content="LACHS" name="apple-mobile-web-app-title">
+  <meta content="LACHS" name="application-name">
   <!--In particular, these two lines refer to Windows 8/10 tiles.-->
-  <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
-  <meta name="theme-color" content="#ffffff">
+  <meta content="assets/favicons/browserconfig.xml" name=
+  "msapplication-config">
+  <meta content="#ffffff" name="theme-color">
   <!--Import jQuery libraries from CDN. CloudFlare's servers are apparently
   some of the best, even if the user might already have jQuery from another
   popular site.-->
+
   <script src=
   "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js">
   </script>
@@ -39,13 +46,14 @@
   to see how that might have helped, but as advised, it has not been included
   in this assignment.
   -->
+
   <script src="code/main.js">
   </script>
 </head>
 <body>
   <header>
     <!--header image as link-->
-    <a href="#"><img src="assets/LACHS.png" alt="LACHS logo"></a>
+    <a href="#"><img alt="LACHS logo" src="assets/LACHS.png"></a>
   </header>
   <nav>
     <input type="button" value="="><!--sandwich button for mobile navbar-->
@@ -76,19 +84,21 @@
       <li>
         <a href="#" id="puzzles"><span class=
         "firstletter blue">P</span>uzzles</a>
+      </li><!--nested list is affected differently at breakpoints-->
+      <li style="list-style: none; display: inline">
+        <ul>
+          <li>
+            <a href="match.html" id="match">Match the Pairs</a>
+          </li>
+          <li>
+            <a href="slidingblocks.html" id="slidingblocks">Sliding Blocks</a>
+          </li>
+          <li>
+            <a href="spotthedifference.html" id="spotthedifference">Spot the
+            Difference</a>
+          </li>
+        </ul>
       </li>
-      <!--nested list is affected differently at breakpoints-->
-      <ul>
-        <li>
-          <a href="match.html" id="match">Match the Pairs</a>
-        </li>
-        <li>
-          <a href="slidingblocks.html" id="slidingblocks">Sliding Blocks</a>
-        </li>
-        <li>
-          <a href="spotthedifference.html" id="spotthedifference">Spot the Difference</a>
-        </li>
-      </ul>
     </ul>
   </nav>
   <main>
@@ -119,49 +129,97 @@
     the Home, News and Accessibility sections.-->
     <div class="hidden" id="foundersContent">
       <h1>Our Founders</h1>
-  	  <div class="founder">
-      <!--Disclaimer: No identification with actual persons (living or deceased), places, buildings, and products is intended or should be inferred. Images are merely placeholders-->
-  		<img class="recommendationImage"  src="assets/founder1.png">
-  		<h2>Haswell Brookes-Lachs</h2>
-  		<p>Haswell is the company's original founder. After having previously worked as an ambasssador for GitHub, he decided to expand his passion for teaching in a way that would reach children everywhere. Building web games was the best way to make this both accessible and modern.</p>
-  	  </div>
-  	  <div class="founder">
-  		<img class="recommendationImage" src="assets/founder2.png">
-  		<h2>Lemmy Lachs</h2>
-  		<p>Lemmy works primarily on the site's backend, having gained strong experience in this area through many years of working at DigitalOcean. While his work on spinning up hundreds of servers for clients across the world was a far bigger role than the one he takes here, he's still diligent in making sure the site is always available.</p>
-  	  </div>
-  	  <div class="founder">
-  		<img class="recommendationImage" src="assets/founder3.png">
-  		<h2>Preis Fisher</h2>
-  		<p>Preis manages LACHS' communications with both customers and companies. He is responsible for the promotion of LACHS games as learning tools, seeking support with our hosting and domain providers, and research. Were it not for Preis, LACHS would not be among some of the strongest tech startups out there!</p>
-  	  </div>
+      <div class="founder">
+        <!--Disclaimer: No identification with actual persons
+        (living or deceased), places, buildings, and products is intended or
+        should be inferred. Images are merely placeholders-->
+        <img class="recommendationImage" src="assets/founder1.png">
+        <h2>Haswell Brookes-Lachs</h2>
+        <p>Haswell is the company's original founder. After having previously
+        worked as an ambasssador for GitHub, he decided to expand his passion
+        for teaching in a way that would reach children everywhere. Building
+        web games was the best way to make this both accessible and modern.</p>
+      </div>
+      <div class="founder">
+        <img class="recommendationImage" src="assets/founder2.png">
+        <h2>Lemmy Lachs</h2>
+        <p>Lemmy works primarily on the site's backend, having gained strong
+        experience in this area through many years of working at DigitalOcean.
+        While his work on spinning up hundreds of servers for clients across
+        the world was a far bigger role than the one he takes here, he's still
+        diligent in making sure the site is always available.</p>
+      </div>
+      <div class="founder">
+        <img class="recommendationImage" src="assets/founder3.png">
+        <h2>Preis Fisher</h2>
+        <p>Preis manages LACHS' communications with both customers and
+        companies. He is responsible for the promotion of LACHS games as
+        learning tools, seeking support with our hosting and domain providers,
+        and research. Were it not for Preis, LACHS would not be among some of
+        the strongest tech startups out there!</p>
+      </div>
     </div>
     <div id="newsContent">
       <h1>News</h1>
       <article>
-        <img src="https://octodex.github.com/images/Professortocat_v2.png" alt="Professor Octocat, Mona Lisa">
+        <img alt="Professor Octocat, Mona Lisa" src=
+        "https://octodex.github.com/images/Professortocat_v2.png">
         <h1>LACHS partners with GitHub!</h1>
-        <p>Version control is a necessity to all programmers - it's a vital part of their education, just like those basic things children learn in primary schools. GitHub knows just how important it is to teach a good workflow and make sure everyone's on the same page, so we have partnered with them to employ a new line of ambassadors for our games!</p>
-        <p>Expect to see LACHS at a school near you very soon as we demonstrate our games to youngsters across the UK, provide fun tutorials, and show them that education can be fun with the magic of modern technology. GitHub's mentors are also very excited to work with us, and have released their own official statement on the matter, from the mouth of their very own little Octocat, Mona Lisa.</p>
-        <blockquote> <!--Acts as trigger for "Show Full" button to be displayed. Anything beyond this point in the article is hidden.-->
+        <p>Version control is a necessity to all programmers - it's a vital
+        part of their education, just like those basic things children learn in
+        primary schools. GitHub knows just how important it is to teach a good
+        workflow and make sure everyone's on the same page, so we have
+        partnered with them to employ a new line of ambassadors for our
+        games!</p>
+        <p>Expect to see LACHS at a school near you very soon as we demonstrate
+        our games to youngsters across the UK, provide fun tutorials, and show
+        them that education can be fun with the magic of modern technology.
+        GitHub's mentors are also very excited to work with us, and have
+        released their own official statement on the matter, from the mouth of
+        their very own little Octocat, Mona Lisa.</p>
+        <blockquote>
+          <!--Acts as trigger for "Show Full" button to be displayed. Anything
+          beyond this point in the article is hidden.-->
           "I can't wait to show you all what LACHS have in store!"
         </blockquote>
-        <p>"Learning can be tough, but this website makes it super fun," the Octocat has said as the mascot of her company in announcing our partnership. "I can't wait to show you all what LACHS have in store!"</p>
-        <p>GitHub are often present at hackathons across the UK and US, so they're much more used to working with university students. We can assure you, however, that they've all been fully trained to engage the interest of primary school children in our official LACHS-approved tutorial programme.</p>
-        <p>Perhaps LACHS will visit your child's school very soon? Watch this space for an official list of schools we'll be visiting.</p>
-        <input type="button" name="showall" value="Show">
+        <p>"Learning can be tough, but this website makes it super fun," the
+        Octocat has said as the mascot of her company in announcing our
+        partnership. "I can't wait to show you all what LACHS have in
+        store!"</p>
+        <p>GitHub are often present at hackathons across the UK and US, so
+        they're much more used to working with university students. We can
+        assure you, however, that they've all been fully trained to engage the
+        interest of primary school children in our official LACHS-approved
+        tutorial programme.</p>
+        <p>Perhaps LACHS will visit your child's school very soon? Watch this
+        space for an official list of schools we'll be
+        visiting.</p><input name="showall" type="button" value="Show">
       </article>
       <article>
-        <img src="assets/slide.png" alt="Sliding Block Puzzle">
+        <img alt="Sliding Block Puzzle" src="assets/slide.png">
         <h1>LACHS releases its first game!</h1>
-        <p>LACHS is proud to release our first game - a sliding block puzzle! Slide each piece into place to match the given image. It's random each time, so have fun trying to create not one, not two, but a possible 362,880 different pictures! And better yet, if you're struggling, just hit the reshuffle button for a new puzzle and a new starting point.</p>
-        <p>Read on for the technicalities...and if you don't know what that word means, perhaps you've got a little more learning to do. Either way, LACHS looks forward to helping as many children on their learning journeys as possible!</p>
+        <p>LACHS is proud to release our first game - a sliding block puzzle!
+        Slide each piece into place to match the given image. It's random each
+        time, so have fun trying to create not one, not two, but a possible
+        362,880 different pictures! And better yet, if you're struggling, just
+        hit the reshuffle button for a new puzzle and a new starting point.</p>
+        <p>Read on for the technicalities...and if you don't know what that
+        word means, perhaps you've got a little more learning to do. Either
+        way, LACHS looks forward to helping as many children on their learning
+        journeys as possible!</p>
         <blockquote>
           "It was tough, but we've finally done it."
         </blockquote>
-        <p>Haswell worked for a straight day to put this game out. It is the culmination of Javascript experience he has picked up over the past several weeks, a language he chose for its extensive compatibility with all kinds of inputs and browsers. The game is fully playable on touchscreens and PCs alike, allowing it to reach children everywhere, no matter their device.</p>
-        <p>We're all very excited to have put this game out for everyone. As Brookes-Lachs proclaimed after a much-needed cup of tea, "It was tough, but we've finally done it." Enjoy the game, and await the next ones!</p>
-        <input type="button" name="showall" value="Show">
+        <p>Haswell worked for a straight day to put this game out. It is the
+        culmination of Javascript experience he has picked up over the past
+        several weeks, a language he chose for its extensive compatibility with
+        all kinds of inputs and browsers. The game is fully playable on
+        touchscreens and PCs alike, allowing it to reach children everywhere,
+        no matter their device.</p>
+        <p>We're all very excited to have put this game out for everyone. As
+        Brookes-Lachs proclaimed after a much-needed cup of tea, "It was tough,
+        but we've finally done it." Enjoy the game, and await the next
+        ones!</p><input name="showall" type="button" value="Show">
       </article>
     </div>
     <div class="hidden" id="recommendationsContent">
@@ -207,8 +265,9 @@
       like to suggest an improvement, we welcome your every message! Please
       fill out the following form. You can also find our address in the page
       footer.</p>
-      <form action="mailto:sgfish1@sheffield.ac.uk" enctype="text/plain" method=
-      "get"> <!--sends email to my personal address in plaintext-->
+      <form action="mailto:sgfish1@sheffield.ac.uk" enctype="text/plain"
+      method="get">
+        <!--sends email to my personal address in plaintext-->
         <input name="name" placeholder="Name:" type="text"><br>
         <input name="emailaddress" placeholder="Email:" type="text"><br>
         <input name="comment" placeholder="Comment:" size="50" type="text"><br>
@@ -223,41 +282,47 @@
       allows your browser to change certain features. In particular, those of
       you with sight impairments are able to use features such as high contrast
       mode and narration. If you do not have a pleasant user experience, please
-      <a href="#" id="contact">contact us</a>.
+      <a href="#" id="contact">contact us</a>.</p>
     </div>
     <div class="hidden" id="puzzlesContent">
       <h1>Our Puzzles</h1>
-      <!--These use the founder class as the layout is practically identical between the two-->
-  	  <div class="founder">
-  		<img src="assets/match.png">
-  		<h2>Match the Pairs</h2>
-  		<p>Use your memory to find the pairs and match them up! Try to make as few mistakes as possible. Good luck!</p>
-  	  </div>
-  	  <div class="founder">
-  		<img src="assets/spot.png">
-  		<h2>Spot the Difference</h2>
-  		<p>Find the differences between the two pictures. You'll need a keen eye! Try to finish as quickly as you can!</p>
-  	  </div>
-  	  <div class="founder">
-  		<img src="assets/slide.png">
-  		<h2>Sliding Blocks</h2>
-  		<p>Slide the blocks into place to reveal the hidden picture! There are three levels in this challenge!</p>
-  	  </div>
+      <!--These use the founder class as the layout is practically identical
+      between the two-->
       <div class="founder">
-  		<img src="assets/maze.png">
-  		<h2>Maze</h2>
-  		<p>Find your way out of the maze! Try not to hit any dead ends! Can you do it?</p>
-  	  </div>
+        <img src="assets/match.png">
+        <h2>Match the Pairs</h2>
+        <p>Use your memory to find the pairs and match them up! Try to make as
+        few mistakes as possible. Good luck!</p>
+      </div>
       <div class="founder">
-  		<img src="assets/memory.png">
-  		<h2>Memory Game</h2>
-  		<p>Remember as many of the shown words as you can. Try this one with some friends and see who's got the strongest brain!</p>
-  	  </div>
+        <img src="assets/spot.png">
+        <h2>Spot the Difference</h2>
+        <p>Find the differences between the two pictures. You'll need a keen
+        eye! Try to finish as quickly as you can!</p>
+      </div>
+      <div class="founder">
+        <img src="assets/slide.png">
+        <h2>Sliding Blocks</h2>
+        <p>Slide the blocks into place to reveal the hidden picture! There are
+        three levels in this challenge!</p>
+      </div>
+      <div class="founder">
+        <img src="assets/maze.png">
+        <h2>Maze</h2>
+        <p>Find your way out of the maze! Try not to hit any dead ends! Can you
+        do it?</p>
+      </div>
+      <div class="founder">
+        <img src="assets/memory.png">
+        <h2>Memory Game</h2>
+        <p>Remember as many of the shown words as you can. Try this one with
+        some friends and see who's got the strongest brain!</p>
+      </div>
     </div>
   </main>
   <footer>
     <p>&copy; 2016 LACHS Games | 15-17 Atom Industrial Estate, Reading,
-      Berkshire, England RG1 1TZ</p>
+    Berkshire, England RG1 1TZ</p>
   </footer>
 </body>
 </html>

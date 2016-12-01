@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  //navbar and sections
+  //makes navbar and sections accessible as jQuery variables quickly.
   var home = $('nav ul #home');
   var founders = $('nav ul #founders');
   var news = $('nav ul #news');
@@ -19,12 +19,10 @@ $(document).ready(function() {
   var fictitiousContent = $('main #fictitiousContent');
   //show all article button
   var showall = $('article input');
-  var hiddenSection = $('article').children(':hidden');
-  //navbar options: showing parts of page on click
+  //sandwich button for nav
   var nav = $('nav input');
-
   $(home).click(function() {
-	document.title = 'LACHS GAMES | Home';
+    document.title = 'LACHS GAMES | Home';
     $(homeContent).slideDown();
     $(foundersContent).hide();
     $(newsContent).show();
@@ -36,7 +34,7 @@ $(document).ready(function() {
     return false;
   });
   $(founders).click(function() {
-	document.title = 'LACHS GAMES | Founders';
+    document.title = 'LACHS GAMES | Founders';
     $(homeContent).hide();
     $(foundersContent).slideDown();
     $(newsContent).hide();
@@ -48,7 +46,7 @@ $(document).ready(function() {
     return false;
   });
   $(news).click(function() {
-	document.title = 'LACHS GAMES | News';
+    document.title = 'LACHS GAMES | News';
     $(homeContent).hide();
     $(foundersContent).hide();
     $(newsContent).slideDown();
@@ -60,7 +58,7 @@ $(document).ready(function() {
     return false;
   });
   $(recommendations).click(function() {
-	document.title = 'LACHS GAMES | Recommendations';
+    document.title = 'LACHS GAMES | Recommendations';
     $(homeContent).hide();
     $(foundersContent).hide();
     $(newsContent).hide();
@@ -72,7 +70,7 @@ $(document).ready(function() {
     return false;
   });
   $(contact).click(function() {
-	document.title = 'LACHS GAMES | Contact';
+    document.title = 'LACHS GAMES | Contact';
     $(homeContent).hide();
     $(foundersContent).hide();
     $(newsContent).hide();
@@ -84,7 +82,7 @@ $(document).ready(function() {
     return false;
   });
   $(contact2).click(function() {
-	document.title = 'LACHS GAMES | Contact';
+    document.title = 'LACHS GAMES | Contact';
     $(homeContent).hide();
     $(foundersContent).hide();
     $(newsContent).hide();
@@ -96,7 +94,7 @@ $(document).ready(function() {
     return false;
   });
   $(accessibility).click(function() {
-	document.title = 'LACHS GAMES | Accessibility';
+    document.title = 'LACHS GAMES | Accessibility';
     $(homeContent).hide();
     $(foundersContent).hide();
     $(newsContent).hide();
@@ -108,7 +106,7 @@ $(document).ready(function() {
     return false;
   });
   $(puzzles).click(function() {
-	document.title = 'LACHS GAMES | Puzzles';
+    document.title = 'LACHS GAMES | Puzzles';
     $(homeContent).hide();
     $(foundersContent).hide();
     $(newsContent).hide();
@@ -119,7 +117,7 @@ $(document).ready(function() {
     $(fictitiousContent).hide();
     return false;
   });
-
+  /*shows/hides everything after a blockquote*/
   $(showall).click(function() {
     $(this).parent().children("blockquote").nextAll().toggle();
     if ($(this).parent().children("blockquote").next().is(":hidden")) {
@@ -129,7 +127,8 @@ $(document).ready(function() {
     }
     $(this).show();
   });
-
+  /*shows/hides the navigation section, and resizes the sandwich button
+  accordingly*/
   $(nav).click(function() {
     $(this).parent().children().nextAll().toggle();
     $(this).show();
@@ -140,9 +139,17 @@ $(document).ready(function() {
     }
   });
   //showing nav menu on resize
-  window.onresize=function(){$(nav).parent().children().nextAll().show();};
-
-  //puzzles slidedown: inspired by http://jsfiddle.net/amkrtchyan/4jxph/3/
-  $('nav ul #puzzles').hover(function(){$('nav ul ul').slideDown();});
-  $('nav ul ul').hover(function(){$('nav ul ul').show()}, function(){$('nav ul ul').delay(800).slideUp();} )
+  window.onresize = function() {
+    $(nav).parent().children().nextAll().show();
+  };
+  /*puzzles slidedown: inspired by, but not taken from,
+  http://jsfiddle.net/amkrtchyan/4jxph/3/*/
+  $('nav ul #puzzles').hover(function() {
+    $('nav ul ul').slideDown();
+  });
+  $('nav ul ul').hover(function() {
+    $('nav ul ul').show()
+  }, function() {
+    $('nav ul ul').delay(800).slideUp();
+  })
 });

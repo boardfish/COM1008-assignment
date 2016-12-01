@@ -1,368 +1,346 @@
+/*Importing fonts from google fonts library. These can then be used in the usual
+manner*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 body {
-  font-size: 2.2vh;
-  font-family: 'Open Sans', sans-serif;
-  width: 100%;
+    font-size: 2.2vh;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
 }
 header img {
-  width: 70%;
-  height: auto;
-  padding: 5% 15% 5% 15%;
-}
-nav {
-  border: solid black;
-  border-width: 10px 0px;
-  z-index: -1px;
-}
-
-/*http://stackoverflow.com/questions/5937148/css-border-not-working, originally had my border as "border: 0 1px 0 1px solid #000;"*/
-
-/*nav ul {
-  width: 20%;
-  float: left;
-  position: fixed;
-  opacity: 0.5;
-  margin-top: 55vh;
-}
-nav li {
-  list-style: none;
-  display: block;
-  padding: 0% 1% 0% 1%;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 2vh;
-  text-align: left;
-  width: 100%;
-  overflow: visible;
-  white-space: nowrap;
-}
-nav li a {
-  text-transform: uppercase;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  opacity: 1;
-  transition: opacity 0.25s;
-}
-nav li a:before {
-  content: "[";
-}
-nav li a:hover {
-  opacity: 1;
-}*/
-
-nav {
-  border: solid black;
-  border-width: 10px 0px;
-  z-index: 0;
-  background-color: lightblue;
-}
-/*http://stackoverflow.com/questions/5937148/css-border-not-working, originally had my border as "border: 0 1px 0 1px solid #000;"*/
-nav ul {
-  display: none;
-  width: 100%;
-  float: none;
-  position: static;
-  opacity: 1;
-  margin: 0 auto 0 auto;
-  padding: 20px 0;
-}
-nav li {
-  list-style: none;
-  display: block;
-  padding: 0% 1% 0% 1%;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 1em;
-  text-align: center;
-  width: 100%;
-  overflow: hidden;
-  white-space: normal;
-}
-nav li a {
-  text-transform: uppercase;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  opacity: 1;
-  transition: color 0.25s;
-}
-nav li a:hover {
-  color: white;
-}
-nav input {
-  font-size: 50px;
-}
-
-nav ul ul {
-  clear: both;
-  display: block;
-}
-
-.firstletter {
-  color: white;
-  background-color: black;
-  padding: 1px 6px 0px 6px;
-  border: 1px solid black;
-}
-.red {
-  background-color: red;
-}
-.yellow {
-  background-color: yellow;
-  color: grey;
-}
-.blue {
-  background-color: blue;
-}
-.green {
-  background-color: green;
-}
-.hidden {
-  display: none;
-} //for jquery slide out on startup
-.titanic {
-  float: none;
-}
-h1 {
-  text-transform: uppercase;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 3.5vh;
-}
-
-main {
-  width: auto;
-  padding: 1% 10% 10% 10%;
-  background-color: yellow;
-}
-article {
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 2px;
-}
-article p {
-  display: none;
-}
-article p:first-of-type {
-  display: block;
-}
-
-article blockquote {
-  width: 80%;
-  margin: 0 auto 0 auto;
-  padding: 10px 0px 10px 10px;
-  border: 5px 0px 5px 0px solid black;
-  font-weight: bold;
-  background-color: lightgray;
-  font-size: 90%;
-}
-article blockquote:before {
-  content: ">>";
-  vertical-align: -0.25em;
-  font-size: 120%;
-  font-family: 'Press Start 2P', cursive;
-  ;
-}
-article img {
-  width: 80%;
-  height: auto;
-  display: table;
-  margin: 0 auto;
-  background-color: white;
-  border: 10px solid black;
-  padding: 5px;
-}
-
-div#puzzlesContent img {
-  background-color: white;
-}
-
-form {
-  width: 80%;
-  margin: 0 auto 0 auto;
-}
-input {
-  background-color: transparent;
-  border: 0px;
-  border-bottom: 2px dashed black;
-  text-align: center;
-  width: 100%;
-}
-::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: black;
-}
-:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: black;
-  opacity: 1;
-}
-::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: black;
-  opacity: 1;
-}
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: black;
-}
-input[name=comment] {
-  padding: 50px 0 50px 0;
-}
-img.recommendationImage {
-  width: 100%;
-  height: auto;
-}
-footer {
-  text-align: center;
-  border: solid black;
-  border-width: 10px 0px;
-  width: 100%;
-  float: right;
-  /*need to fix this!*/
-}
-
-div.founder {
-	background-color: red;
-/*	float: left;
-	width: 27%;
-	margin: 1%;*/
-	margin: 0 0 10px 0;
-	padding: 2%;
-  min-height: 525px;
-	max-height: 800px;
-  float: left;
-}
-
-div.founder h2{
-	background-color: yellow;
-	text-align: center;
-	border: 10px inset yellow;
-    font-family: 'Press Start 2P', cursive;
-	/*font-size: 32px;*/
-	font-size: 1.5vh;
-	padding: 5px;
-}
-
-div.founder img{
-  height: 250px;
-  width: auto;
-  display: table;
-  margin: 0 auto;
-}
-
-#window, #windowGoal {
-  display: table;
-  margin: 10px auto 0 auto;
-  border: 10px inset brown;
-}
-
-#victory {
-  display: none;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-
-  nav ul {
-    width: 100%;
-    display: block;
-  }
-  nav li {
-    overflow: visible;
-    text-align: left;
-  }
-  nav {
-    width: 30%;
-    float: left;
-    position: fixed;
-    padding: 0 0 10px 75px;
-    border-right: 10px solid black;
-    font-size: 18px;
-
-  }
-  main {
-    float: right;
     width: 70%;
-  }
+    height: auto;
+    /*fixed aspect ratio*/
+
+    padding: 5% 15% 5% 15%;
 }
-
-@media screen and (min-width: 1024px) {
-
-  nav input {
-    display: none;
-  }
-  nav {
+nav {
     border: solid black;
     border-width: 10px 0px;
-    z-index: 0;
+    z-index: -1px;
+}
+/*http://stackoverflow.com/questions/5937148/css-border-not-working, originally
+had my border as "border: 0 1px 0 1px solid #000;". Didn't know they had to be
+defined sparately.*/
+
+nav {
+    border: solid black;
+    border-width: 10px 0px;
     background-color: lightblue;
-  }
-  /*http://stackoverflow.com/questions/5937148/css-border-not-working, originally had my border as "border: 0 1px 0 1px solid #000;"*/
-  nav ul {
-    display: block;
+}
+nav ul {
+    display: none;
+    /*initially not visible on mobile due to sandwich menu*/
+
     width: 100%;
     float: none;
-    position: static;
-    opacity: 1;
+    /*cancels out floating implemented for desktop*/
+
     margin: 0 auto 0 auto;
-    padding: 20px 0 40px 0;
-  }
-  nav ul ul {
-    display: none;
-  }
-  nav li {
+    padding: 20px 0;
+}
+nav li {
     list-style: none;
     display: block;
-    padding: 0% 1% 0% 1%;
+    padding: 0% 1%;
     font-family: 'Press Start 2P', cursive;
     font-size: 1em;
     text-align: center;
-    width: 40%;
+    width: 100%;
     overflow: hidden;
+    /*cancels out modification for desktop*/
+
     white-space: normal;
-  }
-  nav li a {
+}
+nav li a {
     text-transform: uppercase;
     color: black;
     text-decoration: none;
+    /*removes link underline*/
+
     font-weight: bold;
     opacity: 1;
     transition: color 0.25s;
-  }
-  nav li a:hover {
+    /*changes color on hover - this adds transition*/
+}
+nav li a:hover {
     color: white;
-  }
-  nav li:nth-child(odd) {
-    float: left;
-  }
-  /*http://stackoverflow.com/questions/13824918/how-to-style-my-unordered-list-like-a-table for nth-child only!*/
-  main {
+}
+nav input {
+    font-size: 50px;
+    /*sets default size of sandwich icon (=)*/
+}
+nav ul ul {
+    clear: both;
+    /*resets CSS behaviour of inner list*/
+
+    display: block;
+    text-align: center;
+}
+.firstletter {
+    color: white;
+    background-color: black;
+    padding: 1px 6px 0px 6px;
+    border: 1px solid black;
+}
+.red {
+    background-color: red;
+}
+.yellow {
+    background-color: yellow;
+    color: grey;
+    /*changes text colour too. White on yellow doesn't look good!*/
+}
+.blue {
+    background-color: blue;
+}
+.green {
+    background-color: green;
+}
+.hidden {
+    display: none;
+}
+h1 {
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3.5vh;
+}
+main {
+    width: auto;
+    /*adapts to width of screen*/
+
+    padding: 1% 10% 10% 10%;
+    background-color: yellow;
+}
+article {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2px;
+}
+/*Only displays first paragraph of article*/
+
+article p {
+    display: none;
+}
+article p:first-of-type {
+    display: block;
+}
+article blockquote {
     width: 80%;
-  }
+    margin: 0 auto 0 auto;
+    padding: 10px 0px 10px 10px;
+    border: 5px 0px 5px 0px solid black;
+    font-weight: bold;
+    background-color: lightgray;
+    font-size: 90%;
+}
+article blockquote:before {
+    content: ">>";
+    vertical-align: -0.25em;
+    /*moves it upwards a little to align with the quote*/
 
-  div.founder, article {
-	float: left;
-	width: 27%;
-	margin: 1%;
-  }
-
-  article {
-    padding: 1%;
-    border: 15px solid black;
-    width: 40%;
-  }
-
-  article img {
+    font-size: 120%;
+    font-family: 'Press Start 2P', cursive;
+    ;
+}
+article img {
     width: 80%;
     height: auto;
-  }
+    display: table;
+    margin: 0 auto;
+    background-color: white;
+    border: 10px solid black;
+    padding: 5px;
+}
+div#puzzlesContent img {
+    background-color: white;
+}
+form {
+    width: 80%;
+    margin: 0 auto 0 auto;
+}
+input {
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 2px dashed black;
+    text-align: center;
+    width: 100%;
+}
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
 
-  #accessibilityContent {
-    clear: both;
-  }
+    color: black;
+}
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
 
+    color: black;
+    opacity: 1;
+}
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
 
+    color: black;
+    opacity: 1;
+}
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
 
-  div.founder h2{
-	font-size: 2vw;
-  }
+    color: black;
+}
+input[name=comment] {
+    padding: 50px 0 50px 0;
+}
+img.recommendationImage {
+    width: 100%;
+    height: auto;
+}
+footer {
+    text-align: center;
+    border: solid black;
+    border-width: 10px 0px;
+    width: 100%;
+}
+div.founder {
+    background-color: red;
+    margin: 0 0 10px 0;
+    padding: 2%;
+    min-height: 525px;
+    max-height: 800px;
+    float: left;
+    /*Thanks to width of divs, these arrange themselves in rows*/
+}
+div.founder h2 {
+    background-color: yellow;
+    text-align: center;
+    border: 10px inset yellow;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5vh;
+    padding: 5px;
+}
+div.founder img {
+    height: 250px;
+    width: auto;
+    display: table;
+    /*helps with centering*/
 
+    margin: 0 auto;
+    /*centers hohrizontally*/
+}
+#window,
+#windowGoal {
+    display: table;
+    margin: 10px auto 0 auto;
+    border: 10px inset brown;
+}
+#victory {
+    display: none;
+    /*don't display victory message until activiated by JS*/
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /*iPad/other tablets - navigation menu shown on the side*/
+
+    nav ul {
+        width: 100%;
+        display: block;
+    }
+    nav li {
+        overflow: visible;
+        text-align: left;
+    }
+    nav {
+        width: 30%;
+        float: left;
+        position: fixed;
+        padding: 0 0 10px 75px;
+        border-right: 10px solid black;
+        font-size: 18px;
+    }
+    main {
+        float: right;
+        width: 70%;
+    }
+}
+@media screen and (min-width: 1024px) {
+    /*desktop*/
+
+    nav input {
+        display: none;
+    }
+    nav {
+        border: solid black;
+        border-width: 10px 0px;
+        z-index: 0;
+        background-color: lightblue;
+    }
+    nav ul {
+        display: block;
+        width: 100%;
+        float: none;
+        position: static;
+        opacity: 1;
+        margin: 0 auto 0 auto;
+        padding: 20px 0 40px 0;
+    }
+    nav ul ul {
+        display: none;
+    }
+    nav li {
+        list-style: none;
+        display: block;
+        padding: 0% 1% 0% 1%;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 1em;
+        text-align: center;
+        width: 40%;
+        overflow: hidden;
+        white-space: normal;
+    }
+    nav li a {
+        text-transform: uppercase;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        opacity: 1;
+        transition: color 0.25s;
+    }
+    nav li a:hover {
+        color: white;
+    }
+    /*http://stackoverflow.com/questions/13824918/how-to-style-my-unordered-list
+    -like-a-table
+    Didn't know about nth-child. This was an interesting way to apply it!*/
+    nav ul li:nth-child(odd) {
+        float: left;
+    }
+    nav ul ul li {
+        clear: both;
+        width: 100%;
+    }
+    nav ul ul {
+        width: 100%;
+    }
+    main {
+        width: 80%;
+    }
+    div.founder,
+    article {
+        float: left;
+        width: 27%;
+        margin: 1%;
+    }
+    article {
+        padding: 1%;
+        border: 15px solid black;
+        width: 40%;
+    }
+    article img {
+        width: 80%;
+        height: auto;
+    }
+    #accessibilityContent {
+        clear: both;
+    }
+    div.founder h2 {
+        font-size: 2vw;
+    }
 }
