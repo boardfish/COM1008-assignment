@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <link href="code/normalise.css" rel="stylesheet" type="text/css">
     <link href="code/main.css" rel="stylesheet" type="text/css">
-    <title>LACHS Games | Home</title>
+    <title>
+      LACHS Games | Home
+    </title>
     <meta content="Simon Fish" name="author">
     <meta content="width=device-width" name="viewport">
     <script src=
@@ -15,70 +17,80 @@
   </head>
   <body>
     <header>
-  <img src="assets/LACHS.png">
-</header>
-  <nav>
-    <ul>
-      <li>
-        <a href="index.html"><span class="firstletter red">R</span>eturn</a>
-      </li>
-    </ul>
-  </nav>
-  <main>
-    <input type="button" onClick="nextLevel()" value="Reset Game">
-    <h1>Goal Image</h1>
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.2"
-    id="windowGoal" width="300" height="300">
-      <rect id="redG" class="square" x="0" y="200" width="100" height="100"
-      fill="red"/>
-      <rect id="greenG" class="square" x="100" y="200" width="100" height="100"
-      fill="green"/>
-      <rect id="blueG" class="square" x="200" y="200" width="100" height="100"
-      fill="blue"/>
-      <rect id="orangeG" class="square" x="0" y="100" width="100" height="100"
-      fill="orange"/>
-      <rect id="pinkG" class="square" x="100" y="100" width="100" height="100"
-      fill="pink"/>
-      <rect id="whiteG" class="square" x="200" y="100" width="100" height="100"
-      fill="white"/>
-      <rect id="cyanG" class="square" x="0" y="0" width="100" height="100"
-      fill="cyan"/>
-      <rect id="yellowG" class="square" x="100" y="0" width="100" height="100"
-      fill="yellow"/>
-      <rect id="purpleG" class="square" x="200" y="0" width="100" height="100"
-      fill="purple"/>
-    </svg>
-    <h1>Match it!</h1>
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.2"
-    id="window" width="300" height="300">
-      <rect id="red" class="square" x="0" y="200" width="90" height="90"
-      fill="red"/>
-      <rect id="green" class="square" x="100" y="200" width="90" height="90"
-      fill="green"/>
-      <rect id="blue" class="square" x="200" y="200" width="90" height="90"
-      fill="blue"/>
-      <rect id="orange" class="square" x="0" y="100" width="90" height="90"
-      fill="orange"/>
-      <rect id="pink" class="square" x="100" y="100" width="90" height="90"
-      fill="pink"/>
-      <rect id="white" class="square" x="200" y="100" width="90" height="90"
-      fill="white"/>
-      <rect id="cyan" class="square" x="0" y="0" width="90" height="90"
-      fill="cyan"/>
-      <rect id="yellow" class="square" x="100" y="0" width="90" height="90"
-      fill="yellow"/>
-      <rect id="purple" class="square" x="200" y="0" width="90" height="90"
-      fill="purple"/>
-    </svg>
-    <div id="victory">
-      <p>Congratulations, <strong>you win!</strong></p>
-      <input type="button" onClick="nextLevel()" value="Play Again">
-    </div>
-    <script src="code/slidingblocks.js"></script>
-  </main>
-  <footer>
-    <p>&copy; 2016 LACHS Games | 15-17 Atom Industrial Estate, Reading,
-      Berkshire, England RG1 1TZ</p>
-  </footer>
+      <img src="assets/LACHS.png">
+    </header>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html"><span class="firstletter red">R</span>eturn</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <input onclick="nextLevel()" type="button" value="Reset Game">
+      <h1>
+        Goal Image
+      </h1>
+      <svg height="300" id="windowGoal" version="1.2" width="300" xmlns=
+      "http://www.w3.org/2000/svg">
+      <rect class="square" fill="red" height="100" id="redG" width="100" x="0"
+      y="200"></rect>
+      <rect class="square" fill="green" height="100" id="greenG" width="100" x=
+      "100" y="200"></rect>
+      <rect class="square" fill="blue" height="100" id="blueG" width="100" x=
+      "200" y="200"></rect>
+      <rect class="square" fill="orange" height="100" id="orangeG" width="100"
+      x="0" y="100"></rect>
+      <rect class="square" fill="pink" height="100" id="pinkG" width="100" x=
+      "100" y="100"></rect>
+      <rect class="square" fill="white" height="100" id="whiteG" width="100" x=
+      "200" y="100"></rect>
+      <rect class="square" fill="cyan" height="100" id="cyanG" width="100" x=
+      "0" y="0"></rect>
+      <rect class="square" fill="yellow" height="100" id="yellowG" width="100"
+      x="100" y="0"></rect>
+      <rect class="square" fill="purple" height="100" id="purpleG" width="100"
+      x="200" y="0"></rect></svg>
+      <h1>
+        Match it!
+      </h1>
+      <svg height="300" id="window" version="1.2" width="300" xmlns=
+      "http://www.w3.org/2000/svg">
+      <rect class="square" fill="red" height="90" id="red" width="90" x="0" y=
+      "200"></rect>
+      <rect class="square" fill="green" height="90" id="green" width="90" x=
+      "100" y="200"></rect>
+      <rect class="square" fill="blue" height="90" id="blue" width="90" x="200"
+      y="200"></rect>
+      <rect class="square" fill="orange" height="90" id="orange" width="90" x=
+      "0" y="100"></rect>
+      <rect class="square" fill="pink" height="90" id="pink" width="90" x="100"
+      y="100"></rect>
+      <rect class="square" fill="white" height="90" id="white" width="90" x=
+      "200" y="100"></rect>
+      <rect class="square" fill="cyan" height="90" id="cyan" width="90" x="0"
+      y="0"></rect>
+      <rect class="square" fill="yellow" height="90" id="yellow" width="90" x=
+      "100" y="0"></rect>
+      <rect class="square" fill="purple" height="90" id="purple" width="90" x=
+      "200" y="0"></rect></svg>
+      <div id="victory">
+        <p>
+          Congratulations, <strong>you win!</strong>
+        </p>
+        <input onclick="nextLevel()" type="button" value="Play Again">
+      </div>
+      <script src="code/slidingblocks.js">
+      </script>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2016 LACHS Games | 15-17 Atom Industrial Estate, Reading,
+        Berkshire, England RG1 1TZ
+      </p>
+    </footer>
   </body>
 </html>

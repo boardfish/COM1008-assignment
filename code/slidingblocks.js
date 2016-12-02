@@ -20,8 +20,9 @@ function swap(square) {
   if ((xDiff < 2 && yDiff < 2) && (xDiff === 0 || yDiff === 0)) {
     grid[squareX][squareY] = "white";
     grid[whiteX][whiteY] = square;
-    console.log(square, "was swapped."); /*Used this and other console.logs as
-    debug, but they're actually very good for following the game itself.*/
+    console.log(square, "was swapped.");
+    /*Used this and other console.logs as
+       debug, but they're actually very good for following the game itself.*/
     redrawGrid(grid, size)
     winCheck()
   } else {
@@ -83,26 +84,29 @@ function init() {
 challenge gave me a lead in to how the random function works with integers*/
 function nextLevel() {
   console.log("The board is being reset.");
-  var colorList = ["red", "orange", "yellow", "green", "blue", "cyan", "purple",
-      "pink", "white"
+  var colorList = ["red", "orange", "yellow", "green", "blue", "cyan", "purple"
+      , "pink", "white"
     ] //add more colours to this list to scale the program up to bigger grids.
-  var goalcolorList = ["redG", "orangeG", "yellowG", "greenG", "blueG", "cyanG",
-    "purpleG", "pinkG", "whiteG"
+  var goalcolorList = ["redG", "orangeG", "yellowG", "greenG", "blueG", "cyanG"
+    , "purpleG", "pinkG", "whiteG"
   ];
   var colorIndex;
   var goalcolorIndex;
   for (var i = 0; i < grid.length; i++) {
     for (var n = 0; n < grid[0].length; n++) {
-      colorIndex = Math.floor(Math.random() * colorList.length); /*chooses the
-      index of a random color in the list*/
+      colorIndex = Math.floor(Math.random() * colorList.length);
+      /*chooses the
+           index of a random color in the list*/
       goalcolorIndex = Math.floor(Math.random() * goalcolorList.length);
       /*chooses the index of a random color in the win condition list*/
       grid[i][n] = colorList[colorIndex];
       endGoalGrid[i][n] = goalcolorList[goalcolorIndex];
-      colorList.splice(colorIndex, 1); /*removes color from the list. This is
-      reinitialised whenever the function is run, so no harm done.*/
-      goalcolorList.splice(goalcolorIndex, 1); /*removes color from the list.
-      This is reinitialised whenever the function is run, so no harm done.*/
+      colorList.splice(colorIndex, 1);
+      /*removes color from the list. This is
+           reinitialised whenever the function is run, so no harm done.*/
+      goalcolorList.splice(goalcolorIndex, 1);
+      /*removes color from the list.
+           This is reinitialised whenever the function is run, so no harm done.*/
     }
   }
   redrawGrid(grid, size)
@@ -112,15 +116,15 @@ function nextLevel() {
 }
 // global variables
 var grid = [
-  ["red", "green", "blue"],
-  ["orange", "pink", "white"],
-  ["cyan", "yellow", "purple"]
+  ["red", "green", "blue"]
+  , ["orange", "pink", "white"]
+  , ["cyan", "yellow", "purple"]
 ]; /*initialises 2d array for grid*/
 var size = $(window).width() / 3;
 var endGoalGrid = [
-  ["purpleG", "pinkG", "whiteG"],
-  ["greenG", "blueG", "cyanG"],
-  ["redG", "orangeG", "yellowG"]
+  ["purpleG", "pinkG", "whiteG"]
+  , ["greenG", "blueG", "cyanG"]
+  , ["redG", "orangeG", "yellowG"]
 ]; /*initialises 2d array for win image*/
 // main program body
 nextLevel();

@@ -134,13 +134,15 @@ $(document).ready(function() {
     $(this).show();
     if ($(this).parent().children().next().is(":hidden")) {
       $(this).css("font-size", "50px");
-      if ($(window).width()>768 && $(window).width()<1024) {
+      /*edits padding for iPad breakpoint*/
+      if ($(window).width() > 768 && $(window).width() < 1024) {
         $(this).parents().first().css("padding", "0 10px 10px 10px")
       }
       console.log($(this).parents().first());;
     } else {
       $(this).css("font-size", "18px");
-      if ($(window).width()>768 && $(window).width()<1024) {
+      /*edits padding for iPad breakpoint*/
+      if ($(window).width() > 768 && $(window).width() < 1024) {
         $(this).parents().first().css("padding", "0 200px 10px 10px")
       }
     }
@@ -149,7 +151,7 @@ $(document).ready(function() {
   window.onresize = function() {
     $(nav).parent().children().nextAll().show();
     $(nav).parents().first().css("padding", "0");
-    if ($(window).width()>768 && $(window).width()<1024) {
+    if ($(window).width() > 768 && $(window).width() < 1024) {
       $(nav).parents().first().css("padding", "0 200px 10px 10px");
     }
   };
