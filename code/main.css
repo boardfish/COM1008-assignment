@@ -6,12 +6,13 @@ body {
     font-size: 2.2vh;
     font-family: 'Open Sans', sans-serif;
     width: 100%;
+    background-color: yellow;
 }
 header img {
     width: 70%;
     height: auto;
     /*fixed aspect ratio*/
-
+    background-color: white;
     padding: 5% 15% 5% 15%;
 }
 nav {
@@ -200,6 +201,7 @@ footer {
     border-width: 10px 0px;
     width: 100%;
     clear: both;
+    background-color: white;
 }
 div.founder {
     background-color: red;
@@ -207,6 +209,7 @@ div.founder {
     padding: 2%;
     min-height: 550px;
     max-height: 800px;
+    display: table;
     float: left;
     /*Thanks to width of divs, these arrange themselves in rows*/
 }
@@ -261,6 +264,8 @@ div.founder img {
         padding: 0 200px 10px 10px;
         border-right: 10px solid black;
         font-size: 18px;
+        background-color: rgba(120, 120, 255, 0.6);
+        z-index: 100;
     }
     main {
         float: right;
